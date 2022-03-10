@@ -17,6 +17,8 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
+
+    //fixed with push methods 
     likedPostsId.push(id); 
 
     //Fixed Like click extra bug not on assignment task
@@ -36,6 +38,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
+    //fixed by changing string type text issue to variable name text ;
     return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
@@ -66,6 +69,7 @@ const createPost = (post) => {
   // console.log('Comment: ', post.comments[0].text,'UserName: ',post.comments[0].user);
   
     const image = post.image;
+    //make userImage actual path and add into avater img tag and comment fixed 
     const userImage = post.userImage;
     const div = document.createElement( "article" );
     div.classList.add( "post" );
@@ -159,7 +163,7 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
-    //Clearing Like post for not Duplicating
+    //Clearing Like post for not Duplicating fixed
     document.getElementById( "liked" ).innerHTML = `
     <h1>Liked posts</h1>
     `;
@@ -171,7 +175,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    //Clearing report post for not Duplicating 
+    //Clearing report post for not Duplicating fixed
     document.getElementById( "reported" ).innerHTML = `
     <h1>Reported posts</h1>
     `;

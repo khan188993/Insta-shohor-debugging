@@ -32,30 +32,3 @@ question alada alada thakbe, ans bangla english e likhte parbo,blog read kre nij
 *)
 
 ]
-
-Session Storage এবং Local Storage  মধ্যে পার্থক্য কি?
---------
-
-Session Storsge হচ্ছে এমন একটি Data storage ব্যবস্থা যেটা ডাটাকে Temporary Time এর জন্য Browser এর Session  Tab এ Store করে রাখে। এটা শুধু মাত্র কিছু সময় এর জন্য বা Browser App Close করা পযন্ত অবস্থিত থাকে।
-
-অপর দিকে Local Storage হচ্ছে এমন একটি ডাটা Storage ব্যবস্থা যেটা ডাটা কে Local Storage নামে Tab এ স্থায়ি ভাবে জমা করে রাখে। Local Storage এর ডাটা কে ডিলেট করতে হলে User কে এটা নিজ উদ্যেগে করতে হয় এটা আপনা আপনি ডিলেট হতে পারে না Session Storage ডাটার মত।
-
-তাই যদি এমন কোন সিচুয়েশন আসে যে Temporary Time এর জন্য ডাটা স্টোর করে রাখতে হবে তাহলে Session Storage ব্যবহার করবো এবং যদি স্থায়ী টাইম এর জন্য Store এর প্রয়োজন হয় তাহলে LocalStorage ব্যবহার করবো।
-
-JAVASCRIPT কিভাবে কাজ করে?----
-
-Javascript হচ্ছে একটি single Thread Programming Language(মানে এক সময়ে একটি কাজ করা)। Javascript Code Browser এ রান করতে যে Engine গুলো ব্যবহার করা হয় তাকে বলা হয় Javascript Engine যেমন V8 Engine,SpiderMonkey Chakra Etc।এগুলো মধ্যে সবচেয়ে পোপুলার হচ্ছে V8 Engine।  এটা C++ Language দিয়ে বানানো হয়েছে এবং এটি Javascript Code কে Machine Code এ রুপান্তর করে JIT(Just in Time Compiler) ব্যবহার করে রান করে থাকে। এবং Javascript Asynchrony Way তে সাধারণত কাজ করে। Asynchrony হচ্ছে এমন একটি পদ্ধতি যেটা Code Run করার সময় যে কোড গুলো Execute হতে কিছুটা লোড বা সময় নিবে তাদের জন্য তার(synchronus code)  নিচের বা পরের আসা কোড কে রান করতে অপেক্ষা করায় না বরং যে কোড গুলো Asynchronously কাজ করবে তাদের Task Queue নামে একটি Tab এ জমা করে রাখে এবং ততক্ষণে Syncronus Code গুলো এক এক করে Event Loop দিয়ে রান করতে থাকে এবং Asynchronous Task এর লোডিং প্রসেস এর কাজ শেষ হলে Event Loop এর মাধ্যমে এগুলোও রান করে দেয় শেষে।
-
-
-
-
-Javascript এ Event Loop কিভাবে কাজ করে?
-
-============
-Event Loop কিভাবে কাজ করে তার পূর্ব আমরা দেখে নিব Javascript কোড কয়টি প্রসেস পার হয়ে রান হয়। 
-
-1)CallStack 
-2)WEB Api 
-3)CallBack/Task Queue 4)Event Loop.
-
-এখানে CallStack Javascript Code লাইন বাই লাইন রিড করে ঠিক করে কোনটা আগে রান হবে এবং কোনটা পরে। এবং CallStack থেকে কোড গুলো একটা একটা করে Event Loop এর মাধ্যমে Execute হতে থাকে। মানে বুঝলাম Event Loop হচ্ছে প্রতিটা Javascript Code Execute করতে সাহায্য করে। কিন্তু CallStack এর ভিতর কোন Code এর কাজ যদি Asynchronous Code হয় তাহলে সেটা রান হতে কিছু সময় নিবে আর এ জন্য এটা Event Loop এ রান করার আগে Web Api তে গিয়ে তার কাজ শেষ করতে থাকে এবং এই Asynchronous Code এর কাজ শেষ করার আগ পযন্ত Event লুপ সকল Synchronous Code Execute করাতে থাকে। Asynchronous Code তার কাজ শেষ করলে সে এসে Task Queue  তে জমা হয় এবং শেষ এ Event Loop এর মাধ্যমে তে রান হয়ে কাজ শেষ করে।
