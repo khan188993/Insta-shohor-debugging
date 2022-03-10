@@ -1,104 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insta-Sohor - Arfan Khan</title>
-        <link rel="stylesheet" href="./css/style.css" />
-        <!-- Latest compiled and minified CSS -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-            crossorigin="anonymous"
-        />
 
-        <!-- google Montserrat  font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insta-Sohor - Arfan Khan</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
-                <a class="navbar-brand" href="#">Insta-Sohor - Arfan Khan</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!-- google Montserrat  font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <div
-                    class="collapse navbar-collapse justify-content-end"
-                    id="navbarSupportedContent"
-                >
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
-                            <i class="fa-solid fa-house"></i>
-                        </li>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5">
+            <a class="navbar-brand" href="#">Insta-Sohor - Arfan Khan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
-                            <i class="fa-solid fa-heart text-danger"></i>
-                        </li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'posts' )">
+                        <i class="fa-solid fa-house"></i>
+                    </li>
 
-                        <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
-                            <i class="fa-solid fa-eye-slash"></i>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main class="main container mx-auto p-3">
-            <div id="posts">
+                    <li class="nav-link active" role="button" onclick="switchTab( 'liked' )">
+                        <i class="fa-solid fa-heart text-danger"></i>
+                    </li>
+
+                    <li class="nav-link active" role="button" onclick="switchTab( 'reported' )">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </li>
+                </ul>
             </div>
-            <div id="liked">
-                <h1>Liked posts</h1>
-            </div>
+        </nav>
+    </header>
+    <main class="main container mx-auto p-3">
+        <div id="posts">
+        </div>
+        <div id="liked">
+            <h1>Liked posts</h1>
+        </div>
 
-            <div id="reported">
-                <h1>Reported posts</h1>
-            </div>
-        </main>
+        <div id="reported">
+            <h1>Reported posts</h1>
+        </div>
+    </main>
 
 
-
-        <section class="question pb-5 pt-5">
-            <div class="container">
-                <div class="question question-1">
-                    <h1>How does javascript Work?</h1><hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet minima esse repellat aspernatur quasi voluptas! Iste earum possimus similique?</p>
+    <!-- Question and Answers  -->
+    <section class="question pb-5 pt-5">
+        <div class="container">
+            <h1 class="Q&A text-center">Question and Answers</h1>
+            <div class="row">
+                <div class=" col-lg-8 offset-lg-2 col-12">
+                    <div class="question question-1">
+                        <h1>JAVASCRIPT কিভাবে কাজ করে?</h1>
+                        <hr>
+                        <p><span>Answer:</span><br>
+                            Javascript হচ্ছে একটি single Thread Programming Language(মানে এক সময়ে একটি কাজ করা)। Javascript Code Browser এ রান করতে যে Engine গুলো ব্যবহার করা হয় তাকে বলা হয় Javascript Engine যেমন V8 Engine,SpiderMonkey Chakra Etc।এগুলো মধ্যে সবচেয়ে পোপুলার হচ্ছে V8 Engine।  এটা C++ Language দিয়ে বানানো হয়েছে এবং এটি Javascript Code কে Machine Code এ রুপান্তর করে JIT(Just in Time Compiler) ব্যবহার করে রান করে থাকে। এবং Javascript Asynchrony Way তে সাধারণত কাজ করে। Asynchrony হচ্ছে এমন একটি পদ্ধতি যেটা Code Run করার সময় যে কোড গুলো Execute হতে কিছুটা লোড বা সময় নিবে তাদের জন্য তার(synchronus code)  নিচের বা পরের আসা কোড কে রান করতে অপেক্ষা করায় না বরং যে কোড গুলো Asynchronously কাজ করবে তাদের Task Queue নামে একটি Tab এ জমা করে রাখে এবং ততক্ষণে Syncronus Code গুলো এক এক করে Event Loop দিয়ে রান করতে থাকে এবং Asynchronous Task এর লোডিং প্রসেস এর কাজ শেষ হলে Event Loop এর মাধ্যমে এগুলোও রান করে দেয় শেষে।
+                        </p>
+                    </div>
                 </div>
-                <div class="question question-2">
-                    <h1>How does javascript event loop work?</h1><hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet minima esse repellat aspernatur quasi voluptas! Iste earum possimus similique?</p>
+                <div class=" col-md-8 offset-md-2 col-12">
+                    <div class="question question-1">
+                        <h1>Javascript এ Event Loop কিভাবে কাজ করে?</h1>
+                        <hr>
+                        <p><span>Answer:</span><br>
+                            Event Loop কিভাবে কাজ করে তার পূর্ব আমরা দেখে নিব Javascript কোড কয়টি প্রসেস পার হয়ে রান হয়। 
+                            <ul >
+                                <li>1)CallStack </li>
+                                <li>2)WEB Api </li>
+                                <li>3)CallBack/Task Queue</li>
+                                <li>4)Event Loop.</li>
+                            </ul><br>
+এখানে CallStack Javascript Code লাইন বাই লাইন রিড করে ঠিক করে কোনটা আগে রান হবে এবং কোনটা পরে। এবং CallStack থেকে কোড গুলো একটা একটা করে Event Loop এর মাধ্যমে Execute হতে থাকে। মানে বুঝলাম Event Loop হচ্ছে প্রতিটা Javascript Code Execute করতে সাহায্য করে। কিন্তু CallStack এর ভিতর কোন Code এর কাজ যদি Asynchronous Code হয় তাহলে সেটা রান হতে কিছু সময় নিবে আর এ জন্য এটা Event Loop এ রান করার আগে Web Api তে গিয়ে তার কাজ শেষ করতে থাকে এবং এই Asynchronous Code এর কাজ শেষ করার আগ পযন্ত Event লুপ সকল Synchronous Code Execute করাতে থাকে। Asynchronous Code তার কাজ শেষ করলে সে এসে Task Queue  তে জমা হয় এবং শেষ এ Event Loop এর মাধ্যমে তে রান হয়ে কাজ শেষ করে।
+                        </p>
+                    </div>
                 </div>
-                <div class="question question-3">
-                    <h1>localstorage vs sessionStorage ?</h1><hr>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa amet minima esse repellat aspernatur quasi voluptas! Iste earum possimus similique?</p>
+                <div class=" col-md-8 offset-md-2 col-12">
+                    <div class="question question-1">
+                        <h1>Session Storage এবং Local Storage  মধ্যে পার্থক্য কি?</h1>
+                        <hr>
+                        <p><span>Answer:</span><br>
+                            Session Storage হচ্ছে এমন একটি Data storage ব্যবস্থা যেটা ডাটাকে Temporary Time এর জন্য Browser এর Session  Tab এ Store করে রাখে। এটা শুধু মাত্র কিছু সময় এর জন্য বা Browser App Close করা পযন্ত অবস্থিত থাকে।
+
+অপর দিকে Local Storage হচ্ছে এমন একটি ডাটা Storage ব্যবস্থা যেটা ডাটা কে Local Storage নামে Tab এ স্থায়ি ভাবে জমা করে রাখে। Local Storage এর ডাটা কে ডিলেট করতে হলে User কে এটা নিজ উদ্যেগে করতে হয় এটা আপনা আপনি ডিলেট হতে পারে না Session Storage ডাটার মত।
+
+তাই যদি এমন কোন সিচুয়েশন আসে যে Temporary Time এর জন্য ডাটা স্টোর করে রাখতে হবে তাহলে Session Storage ব্যবহার করবো এবং যদি স্থায়ী টাইম এর জন্য Store এর প্রয়োজন হয় তাহলে LocalStorage ব্যবহার করবো।
+                        
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
-        <footer class="text-center pb-5 pt-5 bg-info"><span>Made By ARFAN KHAN</span></footer>
+        </div>
+    </section>
+    
+    <footer class="text-center pb-5 pt-5 bg-info"><span>Made By ARFAN KHAN</span></footer>
 
-        <!-- add javascript  file  -->
-        <script src="./js/app.js"></script>
-    </body>
+    <!-- add javascript  file  -->
+    <script src="./js/app.js"></script>
+</body>
+
 </html>
