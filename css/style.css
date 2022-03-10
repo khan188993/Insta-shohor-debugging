@@ -263,3 +263,33 @@ ul{
   padding:0px!important;
 }
 
+
+.Q\&A {
+  color: red;
+  margin-bottom: 38px;
+  position: relative;
+}
+.Q\&A:before {
+  content: "";
+  width: 38%;
+  height: 3px;
+  background: blue;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  display: inline-block;
+  transform: translateX(-50%);
+}
+.question.question-1 h1 {
+  color: green;
+}
+.question.question-1 span {
+  font-size: 26px;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: blueviolet;
+}
+.question.question-1 {
+  margin-top: 27px;
+}
