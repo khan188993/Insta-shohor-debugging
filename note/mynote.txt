@@ -1,0 +1,35 @@
+*)insta shopping clone krbo,
+*)open with live server,
+
+what to do ?
+----------------------
+*)50 marks er jonno 6 ta bug dibe, 5 ta krle 50 pabo, 6 ta optional , extra aro valo,
+
+Bug Explaining 
+------------------------
+1)heart button not working , fix it, red color krte hobe and love list e pathate hobe,
+2) blog post profile picture should be user profile picture, user er ta show krbo,
+code khuje ber kore, user er chobi dekhabo,
+3)read more dekhabo blog er carecter 30 er beshi hole, splite diye krte hobe jodi beshi hoi noy to ager tai show krbo,
+ekhabe 30 er beshi hole splite krtese but kom hole oita show na kore text show krtese eita fix krte hobe,
+
+4)post comment undefined fix krte hobe, ke comment krse and ki comment krse,
+
+*)report button e click krbo tar id ta pathiye ekta array te rakhbo and ter id diye take kete dibo,
+5)report post e shob gulo post dekhache sudu report er gulo dekhabar kotha,
+6)like dile seta red hocche but oita abr bar bar add hocche,
+
+
+for bonus marks : 
+------------------------
+commit 6 ta,
+*)section add under the html tag and ans 2 question of 3 ,
+[
+minimum 5 line ans and sorbocho 10 line hobe,
+question alada alada thakbe, ans bangla english e likhte parbo,blog read kre nij theke likhbo,
+*)how does javascript work?
+*)what does javascript even loop do?
+*)localstorage and session storage er parthokko ki,
+*)
+
+]
